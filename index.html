@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Handbook - Mechanics of Materials</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Navigation Bar-->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-scroll">
+            <ul>
+                <li><a href="https://briantbell.github.io/EngHandbook/">Home</a></li>
+                <!--Modules-->
+                <hr>
+                <p>Mechanics of Materials</p>
+                <li><a href="index.html">Equations</a></li>
+                <li><a href="https://briantbell.github.io/EngHandbook/oops.html">Worked Examples</a></li>
+                <hr>
+                <!--Footnotes-->
+                <li><a href="https://briantbell.github.io/EngHandbook/about.html">About & Contact</a></li>
+                <hr>
+                <!--Donation Station-->
+                <div class="donation_station">
+                    <p>Like the notes? Treat my beautiful girlfriend to a matcha, or me a rolex!</p>
+                    <img class="donation_image" src="assets/images/ProfilePic2.jpg">
+                    <a class="donation_button_a" href="https://www.paypal.com/donate/?hosted_button_id=J3CBM6BLQTM54" target="_blank">
+                        <button class="donation_button">Donate &lt;3</button>
+                    </a>
+                </div>
+            </ul>
+        </div>
+        <button class="toggle-btn" id="toggleBtn">Hide</button>
+    </nav>
+    <button class="show-btn" id="showBtn">Nav</button>
+    <!--Main Site Content-->
+    <div class="content">
+        <header>
+            <h1>Mechanics of Materials</h1>
+        </header>
+        <main>
+            <!--Subtopic-->
+            <section>
+                <h2>What is Mechanics of Materials?</h2>
+                <p>Mechanics of Materials is the study of how materials deform and fail under various loads, such as tension, compression, torsion, or bending. It analyzes stresses and strains within structures like beams, columns, and pressure vessels to ensure they can withstand applied forces safely. Key concepts include material properties, deformation, and failure theories, vital for designing reliable engineering components like bridges, machines, and welds.</p>
+            </section>
+            <hr>
+            <!--Equations-->
+            <section>
+                <h2>1. Stress and Strain</h2>
+                <p>Normal Stress: \( \sigma = \frac{F}{A} \) - Force per unit area, axial or bending.</p>
+                <p>Shear Stress: \( \tau = \frac{V}{A} \) - Shear force over area, e.g., in bolts or beams.</p>
+                <p>Axial Strain: \( \epsilon = \frac{\delta}{L} \) - Change in length over original length.</p>
+                <p>Shear Strain: \( \gamma \approx \theta \) - Angular deformation in radians.</p>
+                <p>Hooke's Law: \( \sigma = E \epsilon \) - Linear stress-strain relation, \( E \) is Young's modulus.</p>
+                <p>Poisson's Ratio: \( \nu = -\frac{\epsilon_{\text{lateral}}}{\epsilon_{\text{axial}}} \) - Lateral to axial strain ratio.</p>
+                <p>Shear Modulus: \( G = \frac{E}{2(1 + \nu)} \) - Relates shear stress to shear strain.</p>
+                <hr>
+
+                <h2>2. Axial Loading</h2>
+                <p>Deformation: \( \delta = \frac{F L}{A E} \) - Axial elongation or compression.</p>
+                <p>Thermal Deformation: \( \delta_T = \alpha L \Delta T \) - Expansion due to temperature change, \( \alpha \) is thermal coefficient.</p>
+                <p>Total Deformation: \( \delta = \sum \frac{F_i L_i}{A_i E_i} + \alpha L \Delta T \) - Combines mechanical and thermal effects.</p>
+                <p>Statically Indeterminate: Use equilibrium (\( \sum F = 0 \)) and compatibility (deformations match).</p>
+                <hr>
+
+                <h2>3. Torsion</h2>
+                <p>Shear Stress (Circular): \( \tau = \frac{T r}{J} \), \( J = \frac{\pi r^4}{2} \) - Max stress at outer radius.</p>
+                <p>Angle of Twist: \( \phi = \frac{T L}{G J} \) - Rotational deformation of shaft.</p>
+                <p>Power: \( P = T \omega \) - Transmitted by rotating shaft, \( \omega \) in rad/s.</p>
+                <p>Non-Circular: Use torsion constant \( K \), \( \tau_{\text{max}} = \frac{T}{K} \).</p>
+                <hr>
+
+                <h2>4. Bending</h2>
+                <p>Flexural Stress: \( \sigma = \frac{M y}{I} \) - Bending stress, max at farthest distance \( y \).</p>
+                <p>Moment of Inertia (Rectangle): \( I = \frac{b h^3}{12} \) - Resistance to bending.</p>
+                <p>Shear Stress: \( \tau = \frac{V Q}{I t} \) - Varies across beam cross-section, \( Q \) is first moment.</p>
+                <p>Max Shear Stress (Rectangle): \( \tau_{\text{max}} = \frac{3 V}{2 b h} \) - At neutral axis.</p>
+                <hr>
+
+                <h2>5. Beam Deflection</h2>
+                <p>Elastic Curve: \( \frac{d^2 v}{dx^2} = \frac{M}{E I} \) - Relates moment to deflection.</p>
+                <p>Point Load (Simply Supported): \( \delta_{\text{max}} = \frac{P L^3}{48 E I} \) - Max deflection at center.</p>
+                <p>Uniform Load (Cantilever): \( \delta_{\text{max}} = \frac{w L^4}{8 E I} \) - Max at free end.</p>
+                <p>Superposition: Add deflections from multiple loads.</p>
+                <hr>
+
+                <h2>6. Combined Loading</h2>
+                <p>Principal Stresses: \( \sigma_{1,2} = \frac{\sigma_x + \sigma_y}{2} \pm \sqrt{\left( \frac{\sigma_x - \sigma_y}{2} \right)^2 + \tau_{xy}^2} \) - Max/min normal stresses.</p>
+                <p>Max Shear Stress: \( \tau_{\text{max}} = \sqrt{\left( \frac{\sigma_x - \sigma_y}{2} \right)^2 + \tau_{xy}^2} \) - At 45° to principal planes.</p>
+                <p>Mohr's Circle: Center at \( \left( \frac{\sigma_x + \sigma_y}{2}, 0 \right) \), radius \( R = \sqrt{\left( \frac{\sigma_x - \sigma_y}{2} \right)^2 + \tau_{xy}^2} \).</p>
+                <hr>
+
+                <h2>7. Columns and Buckling</h2>
+                <p>Euler's Buckling Load: \( P_{cr} = \frac{\pi^2 E I}{L_e^2} \) - Critical load for slender columns.</p>
+                <p>Effective Length: \( L_e = K L \), \( K \) depends on end conditions (e.g., 1 for pinned-pinned).</p>
+                <p>Slenderness Ratio: \( \lambda = \frac{L_e}{r} \), \( r = \sqrt{\frac{I}{A}} \).</p>
+                <hr>
+
+                <h2>8. Failure Theories</h2>
+                <p>Maximum Normal Stress: \( \sigma_1 \leq S_y \) - For brittle materials.</p>
+                <p>Maximum Shear Stress (Tresca): \( \tau_{\text{max}} \leq \frac{S_y}{2} \) - For ductile materials.</p>
+                <p>von Mises Stress: \( \sigma' = \sqrt{\sigma_1^2 + \sigma_2^2 - \sigma_1 \sigma_2} \leq S_y \) - For complex loading.</p>
+                <p>Factor of Safety: \( n = \frac{S_y}{\sigma_{\text{max}}} \).</p>
+                <hr>
+
+                <h2>9. Thin-Walled Pressure Vessels</h2>
+                <p>Hoop Stress: \( \sigma_h = \frac{P r}{t} \) - Circumferential stress.</p>
+                <p>Longitudinal Stress: \( \sigma_l = \frac{P r}{2 t} \) - Axial stress.</p>
+                <p>Spherical Vessel: \( \sigma = \frac{P r}{2 t} \).</p>
+                <hr>
+
+                <h2>10. Thick-Walled Pressure Vessels</h2>
+                <p>Radial Stress (Cylindrical): \( \sigma_r = \frac{P_i r_i^2 - P_o r_o^2 - r_i^2 r_o^2 (P_i - P_o) / r^2}{r_o^2 - r_i^2} \).</p>
+                <p>Hoop Stress (Cylindrical): \( \sigma_\theta = \frac{P_i r_i^2 + P_o r_o^2 + r_i^2 r_o^2 (P_i - P_o) / r^2}{r_o^2 - r_i^2} \).</p>
+                <p>Longitudinal Stress (Cylindrical): \( \sigma_z = \frac{P_i r_i^2}{r_o^2 - r_i^2} \).</p>
+                <p>Spherical Vessel: \( \sigma_\theta = \sigma_\phi = \frac{P_i r_i^3 + P_o r_o^3 + 2 r_i^3 r_o^3 (P_i - P_o) / r^3}{2 (r_o^3 - r_i^3)} \).</p>
+                <hr>
+
+                <h2>11. Fatigue Design</h2>
+                <p>S-N Curve: \( S_f = a N^b \) - Stress vs. cycles to failure.</p>
+                <p>Endurance Limit: \( S_e \approx 0.5 S_u \) - Max stress for infinite life (steel).</p>
+                <p>Goodman Diagram: \( \frac{\sigma_a}{S_e} + \frac{\sigma_m}{S_u} = \frac{1}{n} \) - Accounts for mean and alternating stresses.</p>
+                <p>Fatigue for Welds: Use AISC/ASM standards for allowable stress.</p>
+                <p>Fatigue for Shafts: \( S_e' = k_a k_b k_c k_d S_e \) - Adjust for surface, size, load, temperature.</p>
+                <hr>
+
+                <h2>12. Energy Methods</h2>
+                <p>Strain Energy: \( U = \frac{1}{2} \sigma \epsilon V \) - Stored elastic energy.</p>
+                <p>Castigliano's Theorem: \( \delta_i = \frac{\partial U}{\partial P_i} \) - Deflection from energy derivative.</p>
+                <p>Virtual Work: \( \delta = \int \frac{M m}{E I} dx \) - Deflection using virtual moments.</p>
+                <hr>
+            </section>
+        </main>
+        <footer>
+            <p>Find something wrong? Want to contribute? Please email me!</p>
+            <a href="mailto:briantbell.work@gmail.com">briantbell.work@gmail.com</a>
+            <p>Brian Bell, 2025</p>
+        </footer>
+    </div>
+    
+</body>
+</html>
