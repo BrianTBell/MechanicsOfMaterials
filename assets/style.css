@@ -81,6 +81,16 @@ summary:hover {
     border: 2px;
 }
 
+.cheatSheet-section {
+    display: block;
+  max-width: 80%;
+  margin: auto;
+}
+
+.cheatSheet{
+    max-width: 100%;
+}
+
 .navbar {
     position: fixed;
     top: 0;
