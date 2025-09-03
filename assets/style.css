@@ -1,6 +1,7 @@
 :root {
     --background-color: #F5F5F5;
     --primary-text-color: #1A1A1A;
+    --comment-text-color: #757575;
     --primary-color: #2A4B7C;
     --secondary-color: #D4E4FC;
     --hover-color: #ff6200;
@@ -50,6 +51,32 @@ li a:hover {
 
 summary:hover {
     color: var(--hover-color);
+}
+
+summary {
+    font-size: 1.4em;
+}
+
+details details {
+    margin: 20px 0px 20px 20px;
+}
+
+details details details {
+    margin: 20px 0px 20px 40px;
+}
+
+.comment {
+    color: var(--comment-text-color);
+}
+
+.warning {
+    color: red;
+}
+
+.figure {
+    max-width: 80%;
+    --zoom: 1;
+    transform: scale(var(--zoom));
 }
 
 .donation_station {

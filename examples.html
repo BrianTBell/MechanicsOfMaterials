@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Engineering Handbook - Topic Name</title>
+    <title>Engineering Handbook - Mechanics of Materials Examples</title>
     <link rel="stylesheet" href="assets/style.css">
     <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="assets/favicon_io/favicon.ico" sizes="16x16 32x32 64x64">
@@ -26,9 +26,10 @@
                 <li><a href="https://briantbell.github.io/EngHandbook/">Home</a></li>
                 <!--Modules-->
                 <hr>
-                <p>Topc</p>
+                <p>Mechanics of Materials</p>
                 <li><a href="index.html">Equations</a></li>
                 <li><a href="cheatSheet.html">Cheat Sheet</a></li>
+                <li><a href="https://briantbell.github.io/EngHandbook/tables.html" target="_blank">Tables & Charts</a></li>
                 <li><a href="examples.html">Worked Examples</a></li>
                 <hr>
                 <!--Footnotes-->
@@ -53,10 +54,104 @@
             <h1>Mechanics of Materials</h1>
         </header>
         <main>
-            <!--Subtopic-->
+            <!--Overview-->
             <section>
-                <h2>Subheader</h2>
-                <p>Lorem.</p>
+                <h2>What are These?</h2>
+                <p>These are worked examples of some mechanics of materials problems. They serve to provide insights into how equations I listed can be used. They might not cover all equations, but should provide a good basic overview.</p>
+            </section>
+            <hr>
+            <!--Spur Gear & Shaft Examples-->
+            <section>
+                <p class="warning">Some images on this page are large! For the best experience, resize this site to half your screen.</p>
+                <details>
+                    <!--CAD Models & Introduction-->
+                    <summary><b>Shaft and Spur Gear Fatigue Analysis</b></summary>
+                    <p class="comment"><em>*The working below comes from a team project, however all modeling and calculations presented are my sole work.</em></p>
+                    <p>I led the design and prototyping of the gearbox below for a class back in 2023. Its a 4-stage 75x reduction gearbox. I'll run you through some basic analysis below the images.</p>
+                    <img class="figure" src="assets/images/GearBox/GearboxIso.png">
+                    <p></p>
+                    <img class="figure" src="assets/images/GearBox/GearboxTopView.png">
+                    <!--Extra Prototype Images-->
+                    <details>
+                        <summary class="comment">Prototype Failure & Testing (just for fun)</summary>
+                        <img class="figure" src="assets/images/GearBox/GearboxProto.jpg"> 
+                        <p>Here's our prototype we put together in the lab. Made of HDF, acrylic aluminum.</p>
+                        <img class="figure" src="assets/images/GearBox/GearboxRig.jpg"> 
+                        <p>Gearbox rigged for testing under separate 5kg, 10kg, 15kg, and 20kg loads</p>
+                        <img class="figure" src="assets/images/GearBox/GearboxTest.jpg"> 
+                        <p>It lifts!</p>
+                        <img class="figure" src="assets/images/GearBox/GearboxFailure.jpg"> 
+                        <img class="figure" src="assets/images/GearBox/GearboxFailureZoom.jpg"> 
+                        <p>Keyway on output pulley failed under 15kg load. This is because we were too focused on analyzing gears and shafts. Make sure to follow the full path of stress flow.</p>
+                    </details>
+                    <!--Basic Failure Analysis-->
+                    <details>
+                        <summary>Shafts & Gears - Static Failure Analysis</summary>
+                        <!--Background Info-->
+                        <details>
+                            <summary>Necessary Background Info</summary>
+                            <p>This is a rough schematic of the shaft/gear system inside the gearbox. Shaft/Gear labeling will help you follow through the solution process.</p>
+                            <img class="figure" src="assets/images/GearBoxFiles/Schematic.jpg" style="max-width: 60%;">
+                            
+                            <p>Here are system parameters I calculated for the gears in excel. Columns titled a, b, c, etc, refer to gears a, b, c, etc. These params inform shaft and gear analysis heavily. There is some discrepancy between Excel listed forces and those in the hand calcs, but they should be close enough to follow along.</p>
+                            <img class="figure" src="assets/images/GearBoxFiles/Tables/Basic Gearbox Properties Revised for 20Nm.png">
+                        </details>
+                        <!--Shafts-->
+                            <details>
+                                <summary>Shafts - Static Failure Analysis</summary>
+                                <p>This is an example of static failure analysis for the gearbox input shaft. See 'Necessary Background Info' if you're wondering where loading params come from.</p>
+                                <image class="figure" src="assets/images/GearBoxFiles/Shafts/Shaft A Analysis.jpg"></image>
+                                <br>
+                                <details>
+                                    <summary>More Examples of Shaft Statics Failure Analysis</summary>
+                                        <image class="figure" src="assets/images/GearBoxFiles/Shafts/Shaft BC Analysis.jpg"></image>
+                                        <image class="figure" src="assets/images/GearBoxFiles/Shafts/Shaft DE Analysis.jpg"></image>
+                                        <image class="figure" src="assets/images/GearBoxFiles/Shafts/Shaft F Analysis.jpg"></image>
+                                </details>
+                            </details>
+                        <!--Gears-->
+                            <details>
+                                <summary>Gears - Static Failure Analysis</summary>
+                                <p>This is the basic process for static failure analysis of gears. Unfortunately its a little disjointed, but the process is conveyed. Lewis form factor chart should be in the 'Tables & Charts' tab.</p>
+                                <image class="figure" src="assets/images/GearBoxFiles/Images and Calculations/Property Table Hand Calc Example.jpg"></image>
+                                <image class="figure" src="assets/images/GearBoxFiles/Images and Calculations/Lewis FOS Calculation.jpg"></image>
+                            </details>                            
+                    </details>
+                    <!--Fatigue Analysis-->
+                    <details>
+                        <summary>Shafts & Gears - Fatigue Analysis</summary>
+                        <!--Shafts-->
+                        <details>
+                            <summary>Shaft Fatigue Analysis</summary>
+                            <img class="figure" src="assets/images/GearBoxFiles/Shafts/Fatigue/Input Shaft.jpg">
+                            <details>
+                                <summary>More Examples of Shaft Fatigue Analysis</summary>
+                                <img class="figure" src="assets/images/GearBoxFiles/Shafts/Fatigue/Shaft BC.jpg">
+                                <img class="figure" src="assets/images/GearBoxFiles/Shafts/Fatigue/Shaft DE.jpg">
+                                <img class="figure" src="assets/images/GearBoxFiles/Shafts/Fatigue/Output Shaft.jpg">
+                            </details>
+                            </details>
+                            <!--Gears-->
+                            <details>
+                            <summary>Gear Fatigue Analysis</summary>
+                            <p class="warning">This gear fatigue follows the AGMA standard, so you'll need some charts & tables. I'll link to relevant external references in Tables & Charts Tab, but they're easy to find online if these links go down.</p>
+                            <p>Search for:</p>
+                            <ul>
+                                <li>ASME Standard (its for gears)</li>
+                                <li>Dynamic Form Factor, Kv</li>
+                                <li>Overload Factor, Ko (theres a useful chart out there)</li>
+                                <li>Load Distribution Factor, Km</li>
+                            </ul>
+                            <img class="figure" src="assets/images/GearBoxFiles/Gears/Gear E failure fixed.jpg">
+                            <details>
+                                <summary>More Examples of Shaft Fatigue Analysis</summary>
+                                <img class="figure" src="assets/images/GearBoxFiles/Gears/Gear F failure fixed.jpg">
+                                
+                            </details>
+                            </details>
+                        </details>
+                    </details>
+                </details>
             </section>
             <hr>
         </main>
